@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linda's Art Interactive Web Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Linda's Art Interactive Web Page</h1>
+      <button onclick="alert('Hello! Welcome to Linda\'s Art Page!')">
+        Click Me!
+      </button>
+      <button id="greetBtn">Greet Me!</button>
+      <button id="themeToggleBtn">Toggle Theme</button>
+    </header>
+    <main>
+      <p
+        onmouseover="this.style.color='blue'"
+        onmouseout="this.style.color='red'"
+        Hover
+        over
+        this
+        text
+        to
+        change
+        its
+        color!
+      >
+        Discover Linda's latest artworks and interact with them!
+      </p>
+      <p>Explore Linda's artwork and interact with the pieces!</p>
+
+      <section id="art-gallery">
+        <h2>Art Gallery</h2>
+        <div class="art-piece" id="art1">
+          <img src="art1.jpg" alt="Art Piece 1" width="300" />
+
+          <p>Description of Art Piece 1</p>
+          <button onclick="likeArt('art1')">Like</button>
+          <span id="likes-art1">0 Likes</span>
+        </div>
+        <br />
+        <div class="art-piece" id="art2">
+          <img src="art2.jpg" alt="Art Piece 2" width="300" />
+          <p>Description of Art Piece 2</p>
+          <button onclick="likeArt('art2')">Like</button>
+          <span id="likes-art2">0 Likes</span>
+        </div>
+
+        <!-- Add more art pieces as needed -->
+      </section>
+
+      <!--FAQ Section-->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3 onclick="toggleAnswer('answer1')">What inspires Linda's Art?</h3>
+          <p id="answer1" style="display: none">
+            Nature, emotions, and abstract concepts.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3 onclick="toggleAnswer('answer2')">
+            Where can I buy Linda's art?
+          </h3>
+          <p id="answer2" style="display: none">
+            You can purchase Linda's art through her online store or at local
+            galleries.
+          </p>
+          <p id="answer3" style="display: none">
+            Linda's art is available for purchase through her online store and
+            at select galleries.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">Can I buy the artwork?</h3>
+          <p class="faq-answer hidden">
+            Yes! Please contact Linda through the form below.
+          </p>
+        </div>
+      </section>
+      <!-- Contact Form -->
+      <section id="contact">
+        <h2>📬 Contact Linda</h2>
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+          <span class="error" id="nameError"></span>
+
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" />
+          <span class="error" id="emailError"></span>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" />
+          <button type="button" id="togglePassword">Show/Hide</button>
+          <span class="error" id="passwordError"></span>
+
+          <button type="submit">Submit</button>
+        </form>
+        <p id="formSuccess" class="success"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+</html>
